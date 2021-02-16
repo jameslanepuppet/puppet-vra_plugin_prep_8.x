@@ -1,7 +1,7 @@
 
-# vra_puppet_plugin_prep
+# vra_puppet_plugin_prep_8.x
 
-Prepares a Puppet Enterprise master for vRA Puppet Plugin integration.
+Prepares a Puppet Enterprise master for vRA Puppet Plugin integration 8.x and above.
 
 #### Table of Contents
 
@@ -33,12 +33,8 @@ include vra_puppet_plugin_prep
 
 ```puppet
 class { 'vra_puppet_plugin_prep':
-  vro_plugin_user   => 'vro-plugin-user',
-  vro_password      => 'puppetlabs',
-  vro_password_hash => '$1$Fq9vkV1h$4oMRtIjjjAhi6XQVSH6.Y.',
-  manage_autosign   => true,
+  vro_plugin_user   => 'vro-plugin-user'
   manage_localuser  => true,
-  autosign_secret   => 'S3cr3tP@ssw0rd!',
 }
 ```
 
@@ -52,36 +48,17 @@ Parameters:
 The username the plugin will connect to Puppet with, both via ssh, and api
 
 Default: `vro-plugin-user`
-
-`vro_password`
-The password the plugin will authenticate to the Puppet apis with.
-
-Default: `puppetlabs`
-
-`vro_password_hash`
-The hash of the password the plugin will authenticate with via ssh to the Puppet Master.
-
-Default: `$1$Fq9vkV1h$4oMRtIjjjAhi6XQVSH6.Y.` ('puppetlabs')
-
 `system_uid`
 Whether to create the vro plugin user as a system user.
 
 Default: `false`
 
-`manage_autosign`
-Whether to configure autosigning with this module.
-
-Default: True
 
 `manage_localuser`
 Whether to configure the local user creation with this module
 
 Default: True
 
-`autosign_secret`
-The secret to use for autosign validation. It is placed into the challengePassword within the CSR.
-
-Default: `S3cr3tP@ssw0rd!`
 
 ## Contributors
 
