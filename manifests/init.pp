@@ -15,7 +15,7 @@
 #     manage_autosign    => true,
 #     autosign_secret    => 'S3cr3tP@ssw0rd!',
 #   }
-class vra_puppet_plugin_prep (
+class vra_puppet_plugin_prep_8.x (
   String  $vro_plugin_user,
   Boolean $manage_localuser,
   Boolean $manage_sshd,
