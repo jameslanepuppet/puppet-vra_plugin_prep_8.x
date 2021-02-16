@@ -48,7 +48,6 @@ class vra_puppet_plugin_prep_8_x (
       ensure => present,
       value  => 'no',
     }
-  }
 
   package { 'rgen':
     ensure   => present,
@@ -59,5 +58,4 @@ class vra_puppet_plugin_prep_8_x (
     ensure   => present,
     provider => puppet_gem,
   }
-}
 
