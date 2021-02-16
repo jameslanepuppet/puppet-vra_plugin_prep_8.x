@@ -16,9 +16,7 @@ Prepares a Puppet Enterprise master for vRA Puppet Plugin integration 8.x and ab
 When setting up the vRA Puppet Plugin there are some setup steps that need to be performed on the Puppet Enterprise Master. This module automates many of these, ie it ensures that:
 
 - a system user exists for the plugin to ssh in with
-- an api user exists for the plugin to utilise
 - sudo rules are in place for this user so the plugin can run the commands it needs to
-- autosign policy is configured (shared secret via challengePassword in the CSR)
 
 
 ## Beginning with vra_puppet_plugin_prep
